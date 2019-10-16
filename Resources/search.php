@@ -31,7 +31,7 @@ print "    <br>\n";
 print "	\n";
 print "	<form \n";
 print "\n";
-print "    <form name=\"myForm\" method=\"post\" action=\"testform.php\" onsubmit=\"return validateForm()\">\n";
+print "    <form name=\"myForm\" method=\"post\" action=\"testform.php\" onsubmit=\"return validateUserSearch()\">\n";
 print "        <span>Search</span>\n";
 print "        <input type=\"text\" id=\"SearchBar\" name=\"Search_Bar_Name\" placeholder=\"Title or Artist Name\">\n";
 print "        <br>\n";
