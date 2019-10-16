@@ -12,13 +12,14 @@ print $page->getTopSection();
 print "<div class=\"topbar\">
 				<h1> CNMT 310 Assignment 1 </h1>
 				<ul class=\"nav\">
-					<li><a href=\"http://cnmtsrv2.uwsp.edu/~fleli723/Assignment1/PHP/index.php\">Home</a></li>
-					<li><a href=\"http://cnmtsrv2.uwsp.edu/~fleli723/Assignment1/PHP/survey.php\">Survey</a></li>
-					<li><a href=\"http://cnmtsrv2.uwsp.edu/~fleli723/Assignment1/PHP/privacy.php\">Privacy Policy</a></li>
+					<li><a href=\"http://cnmtsrv2.uwsp.edu/~fleli723/Sprint1Assignment/index.php\">Home</a></li>
+					<li><a href=\"http://cnmtsrv2.uwsp.edu/~fleli723/Sprint1Assignment/survey.php\">Survey</a></li>
+					<li><a href=\"http://cnmtsrv2.uwsp.edu/~fleli723/Sprint1Assignment/privacy.php\">Privacy Policy</a></li>
+					<li><a href=\"http://cnmtsrv2.uwsp.edu/~fleli723/Sprint1Assignment/search.php\">Search</a></li>
 				</ul>
-			</div>
+			</div>";
 			
-			<div class=\"content\">
+print		"<div class=\"content\">
 			
 			<h2> Lorem Ipsum </h2>
 			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus eget
