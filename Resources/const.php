@@ -17,6 +17,7 @@ define("MDB","bubla_t");
 if (basename($_SERVER['PHP_SELF']) == "const.php") {
   die(header("HTTP/1.0 404 Not Found"));
 }
+//this code was done with just on Git Hub itsel 
 
 
 ///This is just some text to test on GitHub to see what I have changed. 
