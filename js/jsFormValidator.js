@@ -9,13 +9,14 @@ let ValidateUserSearch = function() {
    // let userSearch = document.forms["myForm"]["SearchBar"].value; 
    
    
-	let userSearch = $("SearchBar");
+	let userSearch = document.forms["userSearchBarForm"]["SearchBar"].value;
+	
 	
 	
 	
 	
 
-    if (userSearch.value == "") 
+    if (userSearch == "") 
 	{
         alert("Please Enter your search Pretty Please");
         return false;

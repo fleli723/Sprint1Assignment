@@ -1,10 +1,10 @@
 <?php
 
-require_once("Template.php");
+require_once("../classes/Template.php");
 
 $page = new Template("Search Page");
-$page->addHeadElement('<script src="hello.js"></script>');
-$page->addHeadElement('<link rel="stylesheet" type="text/css" href="stylesheet.css">');
+$page->addHeadElement('<script src="../js/jsFormValidator.js"></script>');
+$page->addHeadElement('<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">');
 $page->finalizeTopSection();
 $page->finalizeBottomSection();
 
@@ -24,7 +24,7 @@ print	'
 
 print	'
 <div class="content">
-	<form name="myForm" onsubmit="return validateForm();" action="testform.php" method="post">
+	<form name="userSearchBarForm" onsubmit="return ValidateUserSearch()" action="result.php" method="post">
 		
 		<span>Search: </span>
 		<input type="text" id="SearchBar" name="Search_Bar_Name" placeholder="Title or Artist Name">
