@@ -2,7 +2,7 @@
 
 require_once("Template.php");
 
-$page = new Template("Survey Page");
+$page = new Template("Action Page");
 $page->addHeadElement("<link rel=\"stylesheet\" type=\"text/css\" href=\"stylesheet.css\">");
 $page->finalizeTopSection();
 $page->finalizeBottomSection();
@@ -12,10 +12,10 @@ print $page->getTopSection();
 print 	'<div class="topbar">
 			<h1> CNMT 310 Sprint 1 Assignment</h1>
 			<ul class="nav">
-				<li><a href="http://cnmtsrv2.uwsp.edu/~fleli723/Sprint1Assignment/index.php">Home</a></li>
-				<li><a href="http://cnmtsrv2.uwsp.edu/~fleli723/Sprint1Assignment/survey.php">Survey</a></li>
-				<li><a href="http://cnmtsrv2.uwsp.edu/~fleli723/Sprint1Assignment/privacy.php">Privacy Policy</a></li>
-				<li><a href="http://cnmtsrv2.uwsp.edu/~fleli723/Sprint1Assignment/search.php">Search</a></li>
+				<li><a href="index.php">Home</a></li>		
+				<li><a href="survey.php">Survey</a></li>
+				<li><a href="privacy.php">Privacy Policy</a></li>
+				<li><a href="search.php">Search</a></li>
 			</ul>
 		</div>';
 			
