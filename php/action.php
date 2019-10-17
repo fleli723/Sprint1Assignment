@@ -1,9 +1,9 @@
 <?php
 
-require_once("Template.php");
+require_once("../classes/Template.php");
 
 $page = new Template("Action Page");
-$page->addHeadElement("<link rel=\"stylesheet\" type=\"text/css\" href=\"stylesheet.css\">");
+$page->addHeadElement('<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">');
 $page->finalizeTopSection();
 $page->finalizeBottomSection();
 
