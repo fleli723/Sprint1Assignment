@@ -1,10 +1,10 @@
 <?php
 	
-	require("models/survey.php");
-	require("models/search.php");
-	$lifetime = 60 * 60 * 2;
-    session_set_cookie_params($lifetime,'/');
-    session_start();
+require("models/survey.php");
+require("models/search.php");
+$lifetime = 60 * 60 * 2;
+session_set_cookie_params($lifetime,'/');
+session_start();
 //main index control
 	if(isset($_REQUEST['action']))
 		$action = $_REQUEST['action'];
