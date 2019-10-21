@@ -23,6 +23,7 @@ print 	'<div class="topbar">
 	
 
 //ADD VALIDATION FOR INPUTS
+//ADD CODE TO TAKE USER INPUT AND PUT INTO NEW DB TABLE
 print	'
 <div class="content">		
 	<form name="survey" onsubmit="return validateForm();" action="action.php" method="post">
