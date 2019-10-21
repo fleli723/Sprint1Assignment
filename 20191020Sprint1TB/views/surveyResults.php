@@ -1,15 +1,12 @@
 <?php
 /****************************************************************
 * This class is used to contruct the SurveyResults page used    *
-* for the UWSP Fall 2019 Semester CMNT-310 class. Assignment 1  *
+* for the UWSP Fall 2019 Semester CMNT-310 Sprint !             *
 *                                                               *
 * @author Tim Bubla <tbubl928@uwsp.edu>                         *
-* @FileName: results.php                                        *
+* @FileName: surveyResults.php                                        *
 *                                                               *
 * Changelog:                                                    *
-* 20190926 - Tim Bubla      - Code Adapted for UWSP Assignment  *
-*                                                               *
-*                                                               *
 *                                                               *
 ****************************************************************/
 require_once("models/Template.php");
