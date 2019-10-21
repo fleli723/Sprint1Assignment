@@ -26,7 +26,7 @@ print	'
 <div class="content">
 	<form name="userSearchBarForm" onsubmit="return ValidateUserSearch()" action="result.php" method="post">
 		
-		<span>Search: </span>
+		<span>Search: </span><br>
 		<input type="text" id="SearchBar" name="Search_Bar_Name" placeholder="Title or Artist Name">
 		<br>
 		<input type="submit" value="Submit" id="Btnsubmit">
