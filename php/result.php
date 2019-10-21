@@ -40,6 +40,8 @@ print 	'<div class="topbar">
 				}//end if
 				$result = $con->query($sql);
 				
+				
+				//ADD CODE TO LIST DURATION, UPDATE DB TABLE WITH DURATION OF ALBUMS
 				print '<table id="t01">
 				<caption><h2>Search Results:</h2></caption>
 				<thead>

@@ -1,6 +1,7 @@
 <?php
 
 require_once("../classes/Template.php");
+require_once("const.php");
 
 $page = new Template("Action Page");
 $page->addHeadElement('<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">');
@@ -19,9 +20,12 @@ print 	'<div class="topbar">
 			</ul>
 		</div>';
 			
+			
 print		'<div class="content">
 			<h2 class="action"> Thank you for submitting your answers! </h2>
 			</div>';
+			
+			//ADD CODE TO ADD TO NEW DB
 
 print $page->getBottomSection();
 
