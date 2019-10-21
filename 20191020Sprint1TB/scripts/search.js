@@ -2,38 +2,31 @@ var $ = function(id) {	return document.getElementById(id);	}//end $
 	
 window.onload = function() {
 	//Create event handlers
-	$("frmSearch").reset();
-	$("txtSearch").focus();					//Gives the search field the FOCUS on load
+	$("frmSearch").reset();			//Resets Fields for FF Browser
+	$("txtSearch").focus();			//Gives the search field the FOCUS on load
 	$("txtSearch").onblur = validateSearch;	//If the search field is left then call the 
-	$("btnReset").onclick = resetForm;
-	$("btnSubmit").onclick = validateForm;		 
+	$("btnReset").onclick = resetForm;	//Reset Form
+	$("btnSubmit").onclick = validateForm;	//Validate the form on Submit	 
 }//end window.onload
 
 /* This function validates the email address that the user entered. */
 function validateSearch() {
-	var ptr = $("txtSearch");
-	var err = $("errSearch");
+	var ptr = $("txtSearch"); 		//Pointer for the Search Box
+	var err = $("errSearch");		//Pointer for the Search Box Error Marker
 	if (ptr.value == "") {
 		err.style.visibility = "visible";
 		err.title = "Java - This is a required field.";
 	}else {
 		err.style.visibility = "hidden";
-		
 	}//end if
-	
 	return err.style.visibility == "hidden";
 }//end validateEmailAddress
 
-/* This function accepts any number of parameters. Most are designated as conditions,
-	but they can also be flags. All parameters should evaluate to true/false. 
-	The function returns True if all the conditions are true, but does not short-circuit
-	(quit when false is found).
-	All conditions are evaluated.
-*/
+/* This function accepts any number of parameters. The function returns True if all the conditions 
+are true, but does not short-circuit (quit when false is found). All conditions are evaluated.*/
 function noShortCircuitAnd() {
-	var result = true;		//The function returns True if all the conditions are true, but does not short-circuit
-							//(quit when false is found).
-	
+	var result = true;	//The function returns True if all the conditions are true, but does not short-circuit
+				//(quit when false is found).
 		for (var i=0; i<arguments.length; i++)
 			result = result && arguments[i];	
 			//go through each argument and AND it with the previous
@@ -51,7 +44,7 @@ function resetForm() {
 	$("txtSearch").focus();
 }//end resetForm
 
-/*	This function ensures all form fields are valid before submitting the form data.*/
+/* This function ensures all form fields are valid before submitting the form data.*/
 function validateForm() {
 	if (noShortCircuitAnd (
 			validateSearch())) {  
