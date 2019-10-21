@@ -25,11 +25,15 @@ print	'
 print	'
 <div class="content">
 	<form name="userSearchBarForm" onsubmit="return ValidateUserSearch()" action="result.php" method="post">
-		
-		<span>Search: </span><br>
-		<input type="text" id="SearchBar" name="Search_Bar_Name" placeholder="Title or Artist Name">
-		<br>
-		<input type="submit" value="Submit" id="Btnsubmit">
+	
+		<div class="formboxes">
+			<span>Search: </span><br><br>
+			<input type="text" id="SearchBar" name="Search_Bar_Name" placeholder="Title or Artist Name">
+			<br>
+		</div>
+			
+		<br>	
+		<input class="button" type="submit" value="Submit" id="Btnsubmit">
 		
 	</form>
 </div>	
