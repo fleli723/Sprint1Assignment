@@ -1,6 +1,7 @@
 <?php
 
 require_once("../classes/Template.php");
+require_once("const.php");
 
 $page = new Template("Survey Page");
 $page->addHeadElement('<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">');
@@ -19,7 +20,9 @@ print 	'<div class="topbar">
 				<li><a href="search.php">Search</a></li>
 			</ul>
 		</div>';
-			
+	
+
+//ADD VALIDATION FOR INPUTS
 print	'
 <div class="content">		
 	<form name="survey" onsubmit="return validateForm();" action="action.php" method="post">
