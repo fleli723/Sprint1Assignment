@@ -21,42 +21,49 @@ print 	'<div class="topbar">
 		</div>';
 		
 				//change this information to const.php
-				$localhost = "ppcmbm2018.accountsupportmysql.com";
-				$username = "cnmtclassadmin";
-				$password = "1040EZ-2018";
-				$dbname = "cnmt201915";
+				$localhost = "cnmtsrv1.uwsp.edu";
+				$username = "bubla_t_admin";
+				$password = "xew56baz";
+				$dbname = "bubla_t";
 				$con = new mysqli($localhost, $username, $password, $dbname);
 				//change this information to const.php
 
 				if( $con->connect_error){
 				die('Error: ' . $con->connect_error);} 
 				$sql = "SELECT * FROM albums";
+				
+				//TABLE PRINTS ALL RESULTS, CHECK WHY
 				if( isset($_GET['search']) ){
 					$results = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
 					$sql = "SELECT * FROM albums 
 					WHERE albumArtist LIKE '%$results%' or AlbumTitle LIKE '%$results%'";
 				}//end if
 				$result = $con->query($sql);
-				echo "<table id='t01' >";
-				echo "<caption><h2>Search Results:</h2></caption>";
-				echo '<thead>';
-				echo '<tr>
-					<th width="75px">ID#</th>
-					<th width="200px">Album Artist</th>
-					<th width="300px">Album Title</th>
-					</tr></thead><tbody>';
-				echo "<tbody>";
+				
+				print '<table id="t01">
+				<caption><h2>Search Results:</h2></caption>
+				<thead>
+				<tr>
+					<th>ID#</th>
+					<th>Album Artist</th>
+					<th>Album Title</th>
+				</tr>
+				</thead><tbody>
+				<tbody>';
+				
 				while($row = $result->fetch_assoc()){
-					?>
-					<tr>
-					<td width="75px"><?php echo $row['albumId']; ?></td>
-					<td width="200px"><?php echo $row['albumArtist']; ?></td>
-					<td width="300px"><?php echo $row['albumTitle']; ?></td>
-					</tr>
-				<?php
+					
+				print '<tr>
+					<td width="75px">';echo $row["albumId"];              print '</td>';
+					print ' <td width="200px">';echo $row["albumArtist"]; print'</td>';
+					print ' <td width="300px">';echo $row["albumTitle"];  print' </td>';
+					print' </tr>';
+				
 				}
-				echo "</tbody>";
-				echo "</table><br>";
+				
+				print '</tbody>
+				</table><br>';
+				
 				if (mysqli_num_rows($result)==0) { 
 					echo "No results match your query";
 				}//end if
