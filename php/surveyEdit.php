@@ -1,14 +1,10 @@
 <?php
 /****************************************************************
 * This class is used to contruct the Survey HTML page used      *
-* for the UWSP Fall 2019 Semester CMNT-310 class. Assignment 1  *
+* for the UWSP Fall 2019 Semester CMNT-310 class. Sprint 1      *
 *                                                               *
-* @author Tim Bubla <tbubl928@uwsp.edu>                         *
-* @FileName: survey.php                                         *
-*                                                               *
-* Changelog:                                                    *
-* 20190926 - Tim Bubla      - Code Adapted for UWSP Assignment  *
-*                                                               *
+*                                                               *      
+* @FileName: surveyEdit.php                                     *
 *                                                               *
 *                                                               *
 ****************************************************************/
@@ -53,7 +49,7 @@ if($_POST<>"") {		//If there is data in the POST
 						</fieldset><br>
 						<fieldset>
 							<legend><b><span class='required'>* </span>Majors:</b> (select all that apply)</legend>
-								<!--div id = 'input-content'-->
+								
 									
 									<input type="checkbox" id="chkMajor1" name="major[0]" value="CIS-AppDev" 
 											<?php if (isset($major[0]) && $major[0] == "CIS-AppDev") echo "checked"; ?>>
@@ -83,11 +79,11 @@ if($_POST<>"") {		//If there is data in the POST
 										style="visibility: <?php echo (isset($errors['major']))?"visible;": "hidden;"; ?>"
 										title=" <?php echo (isset($errors['major'])) ? $errors['major']:""; ?>" 
 										>
-								<!--/div-->	
+									
 						</fieldset><br>
 						<fieldset>
 							<legend><b><span class='required'>* </span>CNMT-310 Expected Grade: </b>(select one)</legend>
-								<!--div id = "input-content"-->
+								
 								<?php $grade = (isset($grade))?$grade:""; ?>
 									<input type='radio' name='grade' id='rdoGradeA'  value='A'
 											<?php if($grade=="A") echo "checked='checked'"; ?>>
@@ -109,13 +105,13 @@ if($_POST<>"") {		//If there is data in the POST
 										style="visibility: <?php echo (isset($errors['grade']))?"visible;": "hidden;"; ?>"
 										title=" <?php echo (isset($errors['grade'])) ? $errors['grade']:""; ?>" 
 										>
-								<!--/div-->	
+									
 								
 								
 						</fieldset><br>
 						<fieldset>
 							<legend> <b><span class='required'>* </span>Favorite Pizza Topping: </b>(select one)</legend>
-								<!--div id = 'input-content'-->
+								
 								
 								
 								<?php $pizzaTopping = (isset($pizzaTopping))?$pizzaTopping:""; ?>
