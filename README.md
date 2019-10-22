@@ -1,5 +1,5 @@
 # sprint1
 
-https://cnmtsrv2.uwsp.edu/~cvida526/sprint1/?action=dbSearch
+https://cnmtsrv2.uwsp.edu/~cvida526/sprint1/
 
-Note: Resources contains files we used to for sprint
+Note: Resources contains files we used to develop the sprint1
