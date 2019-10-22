@@ -1,4 +1,4 @@
-event.preventDefault();
+
 var $ = function(id) {	return document.getElementById(id);	}//end $
 	
 window.onload = function() {

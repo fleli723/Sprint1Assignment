@@ -49,7 +49,6 @@ include_once("topNavBar1.php"); ?>
 						<div class='buttons'>
 							<button type='submit' class='buttonStyle' id='btnSubmit' name='btnSubmit'><img src='images/user-save.png' alt='Submit'>&nbsp;Submit</button>
 							<button type='reset' class='buttonStyle' id='btnReset' name='btnReset'><img src='images/undo.gif' alt='Reset'>Reset</button>
-							<button type='submit' class='buttonStyle' id='btnCancel' name='btnCancel'><img src='images/cancel.png' alt='Cancel' height='15' width='15'>Cancel</button>
 						</div>	
 					</form>
 			</div>
