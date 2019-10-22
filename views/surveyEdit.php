@@ -26,7 +26,7 @@ include_once("banner.php");
 include_once("topNavBar1.php");
 if($_POST<>"") {		//If there is data in the POST
 	extract($_POST);	//Extract the POST data and make it available to the page	
-	print_r($_POST);	//used for testing purposes, uncomment to print the $POST array on the top of the view page
+	//print_r($_POST);	//used for testing purposes, uncomment to print the $POST array on the top of the view page
 }//end if
 ?>
 <div id='main'>

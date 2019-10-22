@@ -10,6 +10,19 @@ th, td {
     padding: 5px;
     text-align: left;
 }
+
+.Col1 {
+	width:75px;
+}
+
+.Col2 {
+	width:200px;
+}
+
+.Col3 {
+	width:300px;
+}
+
 table#t01 tr:nth-child(even) {
     background-color: #bbb;
 }

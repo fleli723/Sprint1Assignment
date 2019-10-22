@@ -50,17 +50,17 @@ print " <div id='main'>
 				 <caption><h2>Search Results:</h2></caption>
 				 <thead>
 				 <tr>
-					<th width='75px'>ID#</th>
-					<th width='200px'>Album Artist</th>
-					<th width='300px'>Album Title</th>
+					<th class ='Col1'>ID#</th>
+					<th class ='Col2'>Album Artist</th>
+					<th class ='Col3'>Album Title</th>
 					</tr></thead><tbody>
 				 <tbody>";
 				  while($row = $result->fetch_assoc()){
 					
 					print "<tr>
-					<td width='75px'>"; print $row['albumId']; print"</td>
-					<td width='200px'>"; print $row['albumArtist']; print"</td>
-					<td width='300px'>";print $row['albumTitle']; print"</td>
+					<th class ='Col1'>"; print $row['albumId']; print"</th>
+					<th class ='Col2'>"; print $row['albumArtist']; print"</th>
+					<th class ='Col3'>";print $row['albumTitle']; print"</th>
 					</tr>";
 				
 				}

@@ -17,7 +17,7 @@ $page = new Template("Search page");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/home.css'>");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/topNavBar1.css'>");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/header.css'>");
-$page->addHeadElement("<script type='text/javascript' src='scripts/search.js'></script>");
+$page->addHeadElement("<script src='scripts/search.js'></script>");
 $page->finalizeTopHTML();
 $page->finalizeBottomHTML();
 print $page->getTopHTML();
@@ -35,7 +35,7 @@ include_once("topNavBar1.php"); ?>
 									<?php $search = (isset($search))?$search:""; ?>
 									<label for='txtSearch'><span class="required">* </span>Search word or phrase:</label>
 									<input type='text' name='search' id='txtSearch' tabindex='1' size='50' value='<?php echo $search; ?>' placeholder='Please enter search criteria'>
-									<img src='images/error.gif' name='errSearch' id='errSearch'
+									<img src='images/error.gif' id='errSearch'
 										width='14' height='14' alt='Error icon' 
 										style="visibility: <?php echo (isset($errors['search']))?"visible;": "hidden;"; ?>"
 										title=" <?php echo (isset($errors['search'])) ? $errors['search']:""; ?>" 
