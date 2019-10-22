@@ -3,7 +3,7 @@
 * This class is used to contruct the Privacy HTML page used     *
 * for the UWSP Fall 2019 Semester CMNT-310 class. Assignment 1  *
 *                                                               *
-*    
+*                                                               *
 *                                                               *
 *                                                               *
 ****************************************************************/
