@@ -42,10 +42,10 @@ print "<div id='main'>
 				<h3>"; print $pizzaTopping;print" is your favorite Pizza Topping.</h3><br><hr>";
 				
 				
-				$localhost = "ppcmbm2018.accountsupportmysql.com";
-				$username = "cnmtclassadmin";
-				$password = "1040EZ-2018";
-				$dbname = "cnmt201915";
+				$localhost = "cnmtsrv1.uwsp.edu";
+				$username = "bubla_t_admin";
+				$password = "xew56baz";
+				$dbname = "bubla_t";
 				
 				//Connection
 				$mysqli = new mysqli($localhost, $username, $password, $dbname);
@@ -56,12 +56,12 @@ print "<div id='main'>
 				}//endif
 				 
 				//Consistency check for the major checboxes
-				$major1 = (isset($major[0])) ? true : false;				
-				$major2 = (isset($major[1])) ? true : false;
-				$major3 = (isset($major[2])) ? true : false;
-				$major4 = (isset($major[3])) ? true : false;
-				$major5 = (isset($major[4])) ? true : false;
-				$major6 = (isset($major[5])) ? true : false;
+				$major1 = (isset($major[0])) ? 1 : 0;				
+				$major2 = (isset($major[1])) ? 1 : 0;
+				$major3 = (isset($major[2])) ? 1 : 0;
+				$major4 = (isset($major[3])) ? 1 : 0;
+				$major5 = (isset($major[4])) ? 1 : 0;
+				$major6 = (isset($major[5])) ? 1 : 0;
 				
 				//Get the IP address of the Client
 				if (!empty($_SERVER['HTTP_CLIENT_IP'])) {

@@ -23,16 +23,18 @@ $page->finalizeBottomHTML();
 print $page->getTopHTML();
 include_once("banner.php");
 include_once("topNavBar1.php");
-extract($_POST);?>
-<div id='main'>
+extract($_POST);
+print " <div id='main'>
 			<div id='pageDescription'>
-			<form class='formStyle' name="frmSearchResults" id="searchResults" method ='Post' action='.'>
-				<input type='hidden' name='action' value='dbSearch'>
-				<?php
-				$localhost = "ppcmbm2018.accountsupportmysql.com";
-				$username = "cnmtclassadmin";
-				$password = "1040EZ-2018";
-				$dbname = "cnmt201915";
+			<form class='formStyle' name='frmSearchResults' id='searchResults' method ='Post' action='.'>
+				<input type='hidden' name='action' value='dbSearch'>";
+				
+				$localhost = 'cnmtsrv1.uwsp.edu';
+				$username = 'bubla_t_admin';
+				$password = 'xew56baz';
+				$dbname = 'bubla_t';
+				
+				//Connection
 				$con = new mysqli($localhost, $username, $password, $dbname);
 
 				if( $con->connect_error){
@@ -44,37 +46,36 @@ extract($_POST);?>
 					WHERE albumArtist LIKE '%$results%' or AlbumTitle LIKE '%$results%'";
 				}//end if
 				$result = $con->query($sql);
-				echo "<table id='t01' >";
-				echo "<caption><h2>Search Results:</h2></caption>";
-				echo '<thead>';
-				echo '<tr>
-					<th width="75px">ID#</th>
-					<th width="200px">Album Artist</th>
-					<th width="300px">Album Title</th>
-					</tr></thead><tbody>';
-				echo "<tbody>";
-				while($row = $result->fetch_assoc()){
-					?>
-					<tr>
-					<td width="75px"><?php echo $row['albumId']; ?></td>
-					<td width="200px"><?php echo $row['albumArtist']; ?></td>
-					<td width="300px"><?php echo $row['albumTitle']; ?></td>
-					</tr>
-				<?php
+				print "<table id='t01'>
+				 <caption><h2>Search Results:</h2></caption>
+				 <thead>
+				 <tr>
+					<th width='75px'>ID#</th>
+					<th width='200px'>Album Artist</th>
+					<th width='300px'>Album Title</th>
+					</tr></thead><tbody>
+				 <tbody>";
+				  while($row = $result->fetch_assoc()){
+					
+					print "<tr>
+					<td width='75px'>"; print $row['albumId']; print"</td>
+					<td width='200px'>"; print $row['albumArtist']; print"</td>
+					<td width='300px'>";print $row['albumTitle']; print"</td>
+					</tr>";
+				
 				}
 				echo "</tbody>";
 				echo "</table><br>";
 				if (mysqli_num_rows($result)==0) { 
 					echo "No results match your query";
 				}//end if
-				?>
-				<br><br><div class='buttons'>
+			
+				print "<br><br><div class='buttons'>
 					<button type='submit' class='buttonStyle' id='btnSubmit' name='btnSubmit'><img src='../images/user-save.png' alt='Search Again'>&nbsp;Search Again</button>
 				</div>	
 			</form>
 				</div>
-			</div><!-- end main --> 
-<?php
+			</div><!-- end main -->";
+
 include_once("footer.php");	
 print $page->getBottomHTML();
-?>
