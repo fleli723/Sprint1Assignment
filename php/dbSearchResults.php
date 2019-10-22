@@ -3,11 +3,6 @@
 * This class is used to contruct the Results HTML page used     *
 * for the UWSP Fall 2019 Semester CMNT-310 class. Assignment 1  *
 *                                                               *
-* @author Tim Bubla <tbubl928@uwsp.edu>                         *
-* @FileName: results.php                                        *
-*                                                               *
-* Changelog:                                                    *
-* 20190926 - Tim Bubla      - Code Adapted for UWSP Assignment  *
 *                                                               *
 *                                                               *
 *                                                               *
