@@ -3,10 +3,8 @@
 * This class is used to contruct the SurveyResults page used    *
 * for the UWSP Fall 2019 Semester CMNT-310 Sprint !             *
 *                                                               *
-* @author Tim Bubla <tbubl928@uwsp.edu>                         *
-* @FileName: surveyResults.php                                        *
 *                                                               *
-* Changelog:                                                    *
+*                                                               *
 *                                                               *
 ****************************************************************/
 require_once("classes/Template.php");
