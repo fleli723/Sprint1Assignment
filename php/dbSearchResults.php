@@ -12,7 +12,7 @@
 *                                                               *
 *                                                               *
 ****************************************************************/
-require_once("models/Template.php");
+require_once("classes/Template.php");
 $page = new Template("Search Results page");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/home.css'>");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/topNavBar1.css'>");
@@ -53,6 +53,7 @@ print " <div id='main'>
 					<th class ='Col1'>ID#</th>
 					<th class ='Col2'>Album Artist</th>
 					<th class ='Col3'>Album Title</th>
+					<th class ='Col1'>Album Duration</th>
 					</tr></thead><tbody>
 				 <tbody>";
 				  while($row = $result->fetch_assoc()){
@@ -61,6 +62,7 @@ print " <div id='main'>
 					<th class ='Col1'>"; print $row['albumId']; print"</th>
 					<th class ='Col2'>"; print $row['albumArtist']; print"</th>
 					<th class ='Col3'>";print $row['albumTitle']; print"</th>
+					<th class ='Col1'>";print $row['duration']; print"</th>
 					</tr>";
 				
 				}
@@ -71,7 +73,7 @@ print " <div id='main'>
 				}//end if
 			
 				print "<br><br><div class='buttons'>
-					<button type='submit' class='buttonStyle' id='btnSubmit' name='btnSubmit'><img src='../images/user-save.png' alt='Search Again'>&nbsp;Search Again</button>
+					<button type='submit' class='buttonStyle' id='btnSubmit' name='btnSubmit'><img src='../images/user-save.png' >Search Again</button>
 				</div>	
 			</form>
 				</div>

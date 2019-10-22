@@ -9,7 +9,7 @@
 * Changelog:                                                    *
 *                                                               *
 ****************************************************************/
-require_once("models/Template.php");
+require_once("classes/Template.php");
 $page = new Template("Survey Results page");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/home.css'>");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/topNavBar1.css'>");

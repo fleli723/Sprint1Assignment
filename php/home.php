@@ -3,16 +3,11 @@
 * This class is used to contruct the main Home HTML page used   *
 * for the UWSP Fall 2019 Semester CMNT-310 class. Assignment 1  *
 *                                                               *
-* @author Tim Bubla <tbubl928@uwsp.edu>                         *
-* @FileName: index.php                                          *
-*                                                               *
-* Changelog:                                                    *
-* 20190926 - Tim Bubla      - Code Adapted for UWSP Assignment  *
 *                                                               *
 *                                                               *
 *                                                               *
 ****************************************************************/
-require_once("models/Template.php");
+require_once("classes/Template.php");
 $page = new Template("Home page");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/home.css'>");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/topNavBar1.css'>");

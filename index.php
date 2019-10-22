@@ -1,7 +1,7 @@
 <?php
 	
-require("models/survey.php");
-require("models/search.php");
+require("classes/survey.php");
+require("classes/search.php");
 $lifetime = 60 * 60 * 2;
 session_set_cookie_params($lifetime,'/');
 session_start();
@@ -13,13 +13,13 @@ session_start();
 	//end if
 	switch($action) {
 		case 'home':
-			include('views/home.php');
+			include('php/home.php');
 			break;		
 		case 'surveyEdit':
 			extract($_REQUEST);
 			$errors = "";
 			//$details = "";
-			include('views/surveyEdit.php');
+			include('php/surveyEdit.php');
 			break;	
 		case 'surveySaveNew':		
 			switch(true) {
@@ -27,30 +27,30 @@ session_start();
 					$errors = validateSurveyData();
 					if(count($errors)==0) {
 						//insertSurvey();
-						include('views/surveyResults.php');	
+						include('php/surveyResults.php');	
 					} else {
 						//$major = $POST['major'];
-						include("views/surveyEdit.php");  //Show form again with error markers
+						include("php/surveyEdit.php");  //Show form again with error markers
 					}//end if
 					break;
 				case isset($_REQUEST['btnCancel']):
 					$mbrs = getCompanyList();
-					include('views/adminPayrolls.php');
+					include('php/adminPayrolls.php');
 					break;					
 			}//end switch
 			break;
 		case 'privacy':
-			include('views/privacy.php');
+			include('php/privacy.php');
 			break;	
 		case 'dbSearch':
-			include('views/dbSearch.php');
+			include('php/dbSearch.php');
 			break;
 		case 'dbSearchResults':
-			include('views/dbSearchResults.php');
+			include('php/dbSearchResults.php');
 			break;
 			
 		default:		//for debugging only
-			include('views/pageNotAvail.php');
+			include('php/pageNotAvail.php');
 			break;
 	}//end switch
 ?>

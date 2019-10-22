@@ -12,12 +12,12 @@
 *                                                               *
 *                                                               *
 ****************************************************************/
-require_once("models/Template.php");
+require_once("classes/Template.php");
 $page = new Template("Search page");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/home.css'>");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/topNavBar1.css'>");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/header.css'>");
-$page->addHeadElement("<script src='scripts/search.js'></script>");
+$page->addHeadElement("<script src='js/search.js'></script>");
 $page->finalizeTopHTML();
 $page->finalizeBottomHTML();
 print $page->getTopHTML();
