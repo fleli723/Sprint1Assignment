@@ -1,0 +1,3 @@
+The URL: To Access Our Lab3 Project "http://cnmtsrv2.uwsp.edu/~cvida526/newAttemptLab3/phpclasses_db-master/testDBclass.php "
+
+The GitHub URL To Our Lab3 Project: "https://github.com/fleli723/Database_Lab/tree/master/newAttemptLab3/phpclasses_db-master"
