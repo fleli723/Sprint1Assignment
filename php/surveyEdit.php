@@ -10,7 +10,7 @@
 ****************************************************************/
 require_once("classes/Template.php");
 $page = new Template("Survey page");
-$page->addHeadElement("<script src='js/jsFormValidator.js'></script>");
+
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/home.css'>");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/topNavBar1.css'>");
 $page->addHeadElement("<link rel='stylesheet' type='text/css' href='css/header.css'>");
